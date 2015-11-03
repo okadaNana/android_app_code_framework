@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.owen.codeframework"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    // Multi-Dex
+    compile 'com.android.support:multidex:1.0.1'
+    // 圆形头像 (https://github.com/hdodenhof/CircleImageView)
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    // View 注解 (https://github.com/JakeWharton/butterknife)
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // HTTP 网络库 (https://github.com/loopj/android-async-http)
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    // 图片加载 (https://github.com/bumptech/glide)
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    // 图片加载 (https://github.com/nostra13/Android-Universal-Image-Loader)
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    // 总线 (https://github.com/greenrobot/EventBus)
+    compile 'de.greenrobot:eventbus:2.4.0'
+    // 消息提示 (https://github.com/johnkil/Android-AppMsg)
+    compile 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
+    // Common-Adapter (https://github.com/JoanZapata/base-adapter-helper)
+    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    // Dialog (https://github.com/orhanobut/dialogplus)
+    compile 'com.orhanobut:dialogplus:1.10@aar'
+    // JSON 解析 (https://github.com/alibaba/fastjson)
+    compile files('libs/fastjson-1.1.43.android.jar')
+}
