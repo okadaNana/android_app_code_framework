@@ -50,4 +50,6 @@ dependencies {
     compile 'com.orhanobut:dialogplus:1.10@aar'
     // JSON 解析 (https://github.com/alibaba/fastjson)
     compile files('libs/fastjson-1.1.43.android.jar')
+    // Material EditText
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }
