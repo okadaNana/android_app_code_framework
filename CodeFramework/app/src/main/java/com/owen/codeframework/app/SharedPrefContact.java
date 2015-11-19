@@ -7,6 +7,9 @@ package com.owen.codeframework.app;
  */
 public class SharedPrefContact {
 
+    /**
+     * SharedPreferences 的文件名
+     */
     public static final String SHARED_PREF_NAME = "codeFramework.sharedPref";
 
 }
