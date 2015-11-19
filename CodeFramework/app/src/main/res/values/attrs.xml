@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="TitleBarBtnLeftRight">
-        <attr name="btnLeftText" format="string" />
-        <attr name="btnLeftTextSize" format="dimension" />
-        <attr name="btnLeftTextColor" format="color" />
-        <attr name="btnLeftBackground" format="reference|color" />
-
-        <attr name="btnRightText" format="string" />
-        <attr name="btnRightTextSize" format="dimension" />
-        <attr name="btnRightTextColor" format="color" />
-        <attr name="btnRightBackground" format="reference|color" />
-
-        <attr name="tvTitleText" format="string" />
-        <attr name="tvTitleTextSize" format="dimension" />
-        <attr name="tvTitleTextColor" format="color" />
-        <attr name="tvTitleBackground" format="reference|color" />
+    <declare-styleable name="StatusListView">
+        <attr name="loadingView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="errorView" format="reference" />
     </declare-styleable>
 
 </resources>
