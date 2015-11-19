@@ -7,6 +7,8 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import cz.msebera.android.httpclient.Header;
 
 /**
+ * 对 AsyncHttpResponseHandler 做进一步封装
+ *
  * Created by Owen on 2015/11/3.
  */
 public class ResponseHandler extends AsyncHttpResponseHandler {

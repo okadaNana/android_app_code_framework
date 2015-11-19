@@ -9,7 +9,7 @@ import com.owen.codeframework.util.NetworkHelper;
 import com.owen.codeframework.util.ToastHelper;
 
 /**
- * App Application
+ * App Application。使用 MultiDexApplication，突破方法数 65535 的限制
  *
  * Created by Owen on 2015/11/3.
  */

@@ -6,9 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 对 BaseAdapter 做进一步封装，子类重写 getView() 方法
+ *
  * Created by Owen on 2015/11/3.
  */
 public abstract class BaseAbstractAdapter<T> extends BaseAdapter {
@@ -20,10 +23,25 @@ public abstract class BaseAbstractAdapter<T> extends BaseAdapter {
     public BaseAbstractAdapter(Context context) {
         mContext = context;
         mInflater = LayoutInflater.from(mContext);
+        mListData = new ArrayList<>();
     }
 
+    /**
+     * 设置数据源
+     * @param listData 新的数据源
+     */
     public void setDataSource(List<T> listData) {
-        mListData = listData;
+        mListData.clear();
+        mListData.addAll(listData);
+        notifyDataSetChanged();
+    }
+
+    /**
+     * 在数据源尾部增加更多数据
+     * @param listData 更多的数据源
+     */
+    public void addMoreData(List<T> listData) {
+        mListData.addAll(listData);
         notifyDataSetChanged();
     }
 
